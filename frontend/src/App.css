@@ -1,4 +1,4 @@
-/* General Styling for the App */
+
 .App {
   text-align: center;
   background: linear-gradient(135deg, #1e3c72, #2a5298, #4b6cb7);
@@ -25,7 +25,7 @@
   transform: scale(1.2) rotate(15deg);
 }
 
-/* Reduced Motion Preferences */
+
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 8s linear;
@@ -110,12 +110,12 @@
 }
 
 .complete-btn:hover {
-  background-color: #45a049; /* Darker green when hovered */
+  background-color: #45a049;
   transform: scale(1.05);
 }
 
 .delete-btn {
-  background-color: #f44336; /* Red background for Delete button */
+  background-color: #f44336; 
   color: white;
   border: none;
   padding: 10px 20px;
@@ -126,7 +126,7 @@
 }
 
 .delete-btn:hover {
-  background-color: #e53935; /* Darker red when hovered */
+  background-color: #e53935;
   transform: scale(1.05);
 }
 
