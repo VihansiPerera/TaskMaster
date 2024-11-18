@@ -1,7 +1,7 @@
 /* General Styling for the App */
 .App {
   text-align: center;
-  background: linear-gradient(135deg, #1e3c72, #2a5298);
+  background: linear-gradient(135deg, #1e3c72, #2a5298, #4b6cb7);
   min-height: 100vh;
   color: #ffffff;
   display: flex;
@@ -9,25 +9,26 @@
   align-items: center;
   justify-content: center;
   font-family: 'Roboto', sans-serif;
+  padding: 40px;
 }
 
 /* Logo Styles */
 .App-logo {
-  height: 15vmin;
-  margin-bottom: 20px;
+  height: 14vmin;  /* Increased logo size */
+  margin-bottom: 30px;  /* Increased space between logo and other elements */
   filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.3));
   transition: transform 0.5s ease-in-out;
   pointer-events: none;
 }
 
 .App-logo:hover {
-  transform: scale(1.1) rotate(10deg);
+  transform: scale(1.2) rotate(15deg);
 }
 
 /* Reduced Motion Preferences */
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
-    animation: App-logo-spin infinite 10s linear;
+    animation: App-logo-spin infinite 8s linear;
   }
 }
 
@@ -46,26 +47,86 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 20px;
+  padding: 40px;
   text-align: center;
-  border-radius: 15px;
-  background: rgba(255, 255, 255, 0.1);
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
-  width: 80%;
-  max-width: 800px;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 20px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.25);
+  max-width: 700px;  /* Increased max-width */
+  width: 90%;
+}
+
+/* Main Heading */
+.App-header h1 {
+  font-size: 3rem;  /* Increased font size for the main heading */
+  font-weight: bold;
+  background: linear-gradient(90deg, #ff7eb3, #ff758c, #fd517d);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin: 0;
+  line-height: 1.4;  /* Increased line height for better spacing */
+}
+
+/* Paragraph Styling */
+.App-header p {
+  font-size: 1.2rem;  /* Increased font size for the paragraph */
+  color: #eeeeee;
+  margin: 15px 0 0;
+  line-height: 1.6;  /* Increased line height for better readability */
 }
 
 /* Link Styling */
 .App-link {
-  color: #f4d03f;
+  color: #ffd700;
   text-decoration: none;
   font-weight: bold;
-  font-size: 1.2rem;
-  margin-top: 20px;
-  transition: color 0.3s ease-in-out;
+  font-size: 1.3rem;  /* Increased font size for the link */
+  margin-top: 30px;
+  transition: all 0.3s ease-in-out;
+  border: 2px solid #ffd700;
+  padding: 10px 20px;
+  border-radius: 8px;
+  line-height: 1.5;
 }
 
 .App-link:hover {
-  color: #ffda79;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  color: #fff;
+  background-color: #ffd700;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+  transform: scale(1.1);
 }
+
+/* Button Styling */
+.complete-btn {
+  background-color: #4caf50; /* Green background for Complete button */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1.1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  margin-right: 10px;
+}
+
+.complete-btn:hover {
+  background-color: #45a049; /* Darker green when hovered */
+  transform: scale(1.05);
+}
+
+.delete-btn {
+  background-color: #f44336; /* Red background for Delete button */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1.1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.delete-btn:hover {
+  background-color: #e53935; /* Darker red when hovered */
+  transform: scale(1.05);
+}
+
