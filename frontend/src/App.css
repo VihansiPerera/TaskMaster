@@ -1,145 +1,71 @@
-/* General Reset */
-body {
-    margin: 0;
-    padding: 0;
-    font-family: 'Arial', sans-serif;
-    background-color: #f4f4f9;
-    color: #333;
+/* General Styling for the App */
+.App {
+  text-align: center;
+  background: linear-gradient(135deg, #1e3c72, #2a5298);
+  min-height: 100vh;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Roboto', sans-serif;
 }
 
-/* App Container */
-.app-container {
-    max-width: 800px;
-    margin: 40px auto;
-    padding: 20px;
-    background: #ffffff;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
+/* Logo Styles */
+.App-logo {
+  height: 15vmin;
+  margin-bottom: 20px;
+  filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.3));
+  transition: transform 0.5s ease-in-out;
+  pointer-events: none;
 }
 
-/* Header */
-header {
-    text-align: center;
-    margin-bottom: 30px;
+.App-logo:hover {
+  transform: scale(1.1) rotate(10deg);
 }
 
-header h1 {
-    font-size: 2.5rem;
-    color: #4caf50;
-    margin: 0;
+/* Reduced Motion Preferences */
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 10s linear;
+  }
 }
 
-header p {
-    font-size: 1rem;
-    color: #777;
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
-/* Form Styles */
-form {
-    display: flex;
-    gap: 10px;
-    margin-bottom: 20px;
+/* Header Styling */
+.App-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  text-align: center;
+  border-radius: 15px;
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+  width: 80%;
+  max-width: 800px;
 }
 
-form input {
-    flex: 1;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 1rem;
-    outline: none;
-    transition: border 0.3s ease;
+/* Link Styling */
+.App-link {
+  color: #f4d03f;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.2rem;
+  margin-top: 20px;
+  transition: color 0.3s ease-in-out;
 }
 
-form input:focus {
-    border: 1px solid #4caf50;
-}
-
-form button {
-    padding: 10px 20px;
-    background-color: #4caf50;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 1rem;
-    transition: background-color 0.3s ease;
-}
-
-form button:hover {
-    background-color: #45a049;
-}
-
-/* Task List */
-.task-list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.task-list li {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 15px;
-    margin-bottom: 10px;
-    background-color: #f9f9f9;
-    border: 1px solid #e0e0e0;
-    border-radius: 5px;
-    transition: background-color 0.3s ease, box-shadow 0.3s ease;
-}
-
-.task-list li:hover {
-    background-color: #f1f1f1;
-    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
-}
-
-/* Task Details */
-.task-list li .task-title {
-    font-size: 1rem;
-    word-wrap: break-word;
-}
-
-.task-list li.completed .task-title {
-    text-decoration: line-through;
-    color: #999;
-}
-
-/* Buttons */
-.task-list li button {
-    background-color: transparent;
-    border: none;
-    font-size: 1.2rem;
-    color: #999;
-    cursor: pointer;
-    transition: color 0.3s ease;
-}
-
-.task-list li button:hover {
-    color: #4caf50;
-}
-
-.task-list li button.delete {
-    color: #e74c3c;
-}
-
-.task-list li button.delete:hover {
-    color: #c0392b;
-}
-
-/* Footer */
-footer {
-    text-align: center;
-    margin-top: 20px;
-    font-size: 0.9rem;
-    color: #aaa;
-}
-
-footer a {
-    color: #4caf50;
-    text-decoration: none;
-}
-
-footer a:hover {
-    text-decoration: underline;
+.App-link:hover {
+  color: #ffda79;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
